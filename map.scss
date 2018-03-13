@@ -1,0 +1,79 @@
+.map-fluid {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: $text-color;
+  font-family: Courier;
+  font-size: 16px;
+}
+
+.loader {
+  @extend .map-fluid;
+}
+
+// Leaflet fixes
+.leaflet-popup {
+	font-family: Courier;
+}
+.leaflet-popup-content-wrapper {
+	background: $background;
+	padding: 0px;
+  color: $text-color;
+  box-shadow: 0 3px 14px rgba(0,0,0,0);
+  border-radius: 0px;
+  border: $border;
+}
+.leaflet-popup-content {
+	margin: 10px 20px;
+}
+.leaflet-tooltip {
+	background-color: transparent;
+	border-radius: 0px;
+	border: none;
+	box-shadow: 0 3px 14px rgba(0,0,0,0);
+	font-size: 5em;
+	line-height: 1em;
+	 color: $text-color;
+   -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: $text-color;
+  font-family: 'zigguratmedium_italic';
+}
+.leaflet-tooltip-tip {
+		display: none;
+}
+.leaflet-tooltip-left::before {
+  border-left-color: $text-color;
+}
+.leaflet-tooltip-right::before {
+  border-right-color: $text-color;
+}
+.leaflet-popup-tip {
+  width: 2px;
+  height: 13px;
+  padding: 1px;
+  margin: 0px auto 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background: $text-color;
+}
+.leaflet-container a.leaflet-popup-close-button {
+	color: $text-color;
+}
+
+.leaflet-tile {
+  filter: invert(0);
+  opacity: 0.2 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 1001;
+}
